@@ -17,7 +17,7 @@ const SignIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const loggedInUser = users.find(
-      user => user.email === logInInputs.email && user.password === logInInputs.password
+      user => user.userName === logInInputs.userName && user.password === logInInputs.password
     );
 
     if(loggedInUser){

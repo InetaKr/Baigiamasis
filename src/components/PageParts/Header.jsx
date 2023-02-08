@@ -20,7 +20,7 @@ const Header = () => {
                 <Link to="/forum">Forum</Link>
               </div>
               <div>
-                <Link to="/ask">Ask Question</Link>
+                <Link to="/add">Ask Question</Link>
               </div>
               </div>
               <UserInfo />
