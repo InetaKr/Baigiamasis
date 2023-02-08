@@ -2,7 +2,7 @@ import UserContext from "../context/UserContext";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const LogIn = () => {
+const SignIn = () => {
 
   const {users, setLoggedInUser } = useContext(UserContext);
   const navigate = useNavigate()
@@ -63,4 +63,4 @@ const LogIn = () => {
     );
   }
   
-  export default LogIn;
+  export default SignIn;
