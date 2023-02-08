@@ -1,10 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import * as yup from 'yup';
 import UserContext from "../../context/UserContext";
 
-const Register = () => {
+const SignUp = () => {
   
     const initialValues = {
         userName: '',  
@@ -145,4 +145,4 @@ const Register = () => {
     
   };
   
-  export default Register;
+  export default SignUp;
