@@ -1,6 +1,11 @@
 {
     "users":[
         {
+            "userName": "InetaKr",
+            "email": "InetaKr@email.com",
+            "password": "belekas",
+            "avatar": "https://e1.pxfuel.com/desktop-wallpaper/428/888/desktop-wallpaper-cat-icons-lockscreens-red-psd-and-aesthetic-aesthetic-cat.jpg",
+            "id": 1
 
         }
     ],
