@@ -53,15 +53,19 @@ const handleLike = async (id) => {
   const updatedQuestion= questions.find(question => question.id === id);
   if(!updatedQuestion.likedBy.includes(loggedInUser.id)) {
       updatedQuestion.likedBy.push(loggedInUser.id);
+      updatedQuestion.disLikedBy = updatedQuestion.disLikedBy.filter(userId => userId !== loggedInUser.id);
   } else {
       updatedQuestion.likedBy = updatedQuestion.likedBy.filter(userId => userId !== loggedInUser.id);
   }
   await updateQuestion(id, updatedQuestion);
 }
+
+
 const handleDisLike = async (id) => {
   const updatedQuestion= questions.find(question => question.id === id);
   if(!updatedQuestion.disLikedBy.includes(loggedInUser.id)) {
       updatedQuestion.disLikedBy.push(loggedInUser.id);
+      updatedQuestion.likedBy = updatedQuestion.likedBy.filter(userId => userId !== loggedInUser.id);
   } else {
       updatedQuestion.disLikedBy = updatedQuestion.disLikedBy.filter(userId => userId !== loggedInUser.id);
   }
