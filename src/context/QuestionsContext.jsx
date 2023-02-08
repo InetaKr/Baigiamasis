@@ -32,7 +32,7 @@ const QuestionsProvider = ({ children }) => {
     method: 'DELETE',
   }).then(res => {
     if(res.ok){
-    setQuestions(series.filter(question => question.id !== id));
+    setQuestions(questions.filter(question => question.id !== id));
   }
   })
 };
