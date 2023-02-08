@@ -9,6 +9,8 @@ const Question = ({ data }) => {
   const { deleteQuestion, handleLike, handleDisLike } = useContext(QuestionsContext);
 
   const QuestionOwner = users.find(user => user.id === data.userId);
+  const QuestionVote = data.likedBy.length - data.disLikedBy.length;
+
 
   return (
     <div className="QuestionCards">
@@ -38,8 +40,11 @@ const Question = ({ data }) => {
       <br/>
       <div className="QuestionCardDataInfo">
         <>
+        <div><p>{QuestionVote} vote</p></div>
+      <div>
       <h2>{data.title}</h2>
       <p>{data.description}</p>
+      </div>
       </>
       </div>
       <div className="likeDislikeWrapper">
