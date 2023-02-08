@@ -6,6 +6,7 @@ import SignIn from './components/User/SignIn';
 import SignUp from './components/User/SignUp';
 import Forum from './components/PageParts/Forum';
 import AddQuestion from './components/Questions/AddQuestion';
+import EditQuestion from './components/Questions/EditQuestion';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
         <Route path='/signUp' element={<SignUp/>} />
         <Route path='/forum' element={<Forum/>} />
         <Route path='/add' element={<AddQuestion />}/>
-        <Route  />
+        <Route path="/editQuestion/:id" element={<EditQuestion />} />
         <Route  />
         
       </Routes>

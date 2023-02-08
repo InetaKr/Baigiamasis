@@ -20,10 +20,12 @@ const AddQuestion = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const newQuestion = {
-      name: formInputs.name,
+      title: formInputs.title,
       description: formInputs.description,
+      timestamp: new Date().toLocaleString(),
       id: Date.now(),
       userId: loggedInUser.id,
+      isEdited: false,
       likedBy: [],
       disLikedBy: []
     };

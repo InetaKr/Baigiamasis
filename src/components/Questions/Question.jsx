@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Question = ({ data }) => {
 
+
   const { users, loggedInUser } = useContext(UserContext);
   const { deleteQuestion, handleLike, handleDisLike } = useContext(QuestionsContext);
 
@@ -43,6 +44,8 @@ const Question = ({ data }) => {
         <div><p>{QuestionVote} vote</p></div>
       <div>
       <h2>{data.title}</h2>
+      {data.isEdited && <p>Edited</p>}
+      <p>{data.timestamp}</p>
       <p>{data.description}</p>
       </div>
       </>
