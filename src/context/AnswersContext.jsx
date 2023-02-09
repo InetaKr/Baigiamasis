@@ -1,11 +1,13 @@
-import { createContext, useState, useEffect } from "react";
-
+import { createContext, useState, useEffect, useContext } from "react";
+import UserContext from "./UserContext"
 const AnswersContext = createContext();
+
 
 const AnswersProvider = ({children}) => {
 
     const [answers, setAnswers] = useState([]);
-    
+    const { loggedInUser } = useContext(UserContext);
+
     useEffect(() => {
         const data = async () => {
             const res = await fetch("http://localhost:5000/answers");

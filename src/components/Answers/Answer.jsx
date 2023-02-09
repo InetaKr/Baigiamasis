@@ -45,7 +45,7 @@ const Answer = ({ data }) => {
       <div>
       {data.isEdited && <p>Edited</p>}
       <p>{data.timestamp}</p>
-      <p>{data.description}</p>
+      <p>{data.answer}</p>
       </div>
       </>
       </div>
