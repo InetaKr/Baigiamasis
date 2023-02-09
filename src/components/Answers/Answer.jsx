@@ -1,16 +1,30 @@
 import UserContext from "../../context/UserContext";
 import AnswersContext from "../../context/AnswersContext";
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import EditAnswer from "./EditAnswer";
 
 const Answer = ({ data }) => {
 
+  const [isEditing, setIsEditing] = useState(false);
 
   const { users, loggedInUser } = useContext(UserContext);
-  const { deleteAnswer, handleLike, handleDisLike } = useContext(AnswersContext);
+  const { deleteAnswer, handleLike, handleDisLike,updateAnswer } = useContext(AnswersContext);
 
   const AnswerOwner = users.find(user => user.id === data.userId);
   const AnswerVote = data.likedBy.length - data.disLikedBy.length;
+
+  const toggleEdit = () => {
+    setIsEditing(!isEditing);
+  };
+
+  const onUpdate = (id, updatedAnswer) => {
+    updateAnswer(id, {
+        ...updatedAnswer,
+        isEdited: true,
+        timestamp: new Date().toLocaleString()
+    });
+    setIsEditing(false);
+  };
 
 
   return (
@@ -33,13 +47,17 @@ const Answer = ({ data }) => {
         <>
         <div className="ownerButtons">
           <button onClick={() => deleteAnswer(data.id)}><i className="fa fa-trash" /></button>
-          <button><Link to={`/editAnswer/${data.id}`}><i className="fa fa-edit" /></Link></button>
+          <button onClick={toggleEdit}><i className="fa fa-edit" /></button>
         </div>  
         </>
       }
       </div>
       <br/>
+
       <div className="AnswerCardDataInfo">
+      {isEditing ? (
+              <EditAnswer data={data} setIsEditing={setIsEditing} onUpdate={onUpdate} />
+            ) : (
         <>
         <div><p>{AnswerVote} vote</p></div>
       <div>
@@ -48,7 +66,10 @@ const Answer = ({ data }) => {
       <p>{data.answer}</p>
       </div>
       </>
+      )}
       </div>
+
+
       <div className="likeDislikeWrapper">
         {loggedInUser &&
         <>
