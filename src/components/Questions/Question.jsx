@@ -1,13 +1,16 @@
 import UserContext from "../../context/UserContext";
 import QuestionsContext from "../../context/QuestionsContext";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Question = ({ data }) => {
 
 
   const { users, loggedInUser } = useContext(UserContext);
   const { deleteQuestion, handleLike, handleDisLike } = useContext(QuestionsContext);
+  
+  const location = useLocation();
+
 
   const QuestionOwner = users.find(user => user.id === data.userId);
   const QuestionVote = data.likedBy.length - data.disLikedBy.length;
@@ -43,7 +46,13 @@ const Question = ({ data }) => {
         <>
         <div><p>{QuestionVote} vote</p></div>
       <div>
-      <h2>{data.title}</h2>
+      {location.pathname === `/question/${data.id}` ? (
+        <h2>{data.title}</h2>
+      ) : (
+        <Link to={`/question/${data.id}`}>
+          <h2>{data.title}</h2>
+        </Link>
+      )}
       {data.isEdited && <p>Edited</p>}
       <p>{data.timestamp}</p>
       <p>{data.description}</p>

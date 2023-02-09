@@ -7,6 +7,7 @@ import SignUp from './components/User/SignUp';
 import Forum from './components/PageParts/Forum';
 import AddQuestion from './components/Questions/AddQuestion';
 import EditQuestion from './components/Questions/EditQuestion';
+import AnswerPage from './components/PageParts/AnswerPage';
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
         <Route path='/forum' element={<Forum/>} />
         <Route path='/add' element={<AddQuestion />}/>
         <Route path="/editQuestion/:id" element={<EditQuestion />} />
-        <Route  />
+        <Route path="/question/:id" element={<AnswerPage/>} />
         
       </Routes>
     </>
