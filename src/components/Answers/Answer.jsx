@@ -1,51 +1,48 @@
 import UserContext from "../../context/UserContext";
-import QuestionsContext from "../../context/QuestionsContext";
+import AnswersContext from "../../context/AnswersContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
-const Question = ({ data }) => {
+const Answer = ({ data }) => {
 
 
   const { users, loggedInUser } = useContext(UserContext);
-  const { deleteQuestion, handleLike, handleDisLike } = useContext(QuestionsContext);
+  const { deleteAnswer, handleLike, handleDisLike } = useContext(AnswersContext);
 
-  const QuestionOwner = users.find(user => user.id === data.userId);
-  const QuestionVote = data.likedBy.length - data.disLikedBy.length;
+  const AnswerOwner = users.find(user => user.id === data.userId);
+  const AnswerVote = data.likedBy.length - data.disLikedBy.length;
 
 
   return (
-    <div className="QuestionCards">
+    <div className="AnswerCards">
       <div className="ownerInfo">
-      {QuestionOwner && 
+      {AnswerOwner && 
         <>
-        <div className="question-info">
+        <div className="answer-info">
           <img
-            src={QuestionOwner.avatar}
+            src={AnswerOwner.avatar}
             alt="user avatar" 
           />
-          <span>{QuestionOwner.userName}</span>
+          <span>{AnswerOwner.userName}</span>
           </div>
         </>
       }
       
       {
-        loggedInUser && loggedInUser.id === QuestionOwner.id &&
+        loggedInUser && loggedInUser.id === AnswerOwner.id &&
         <>
         <div className="ownerButtons">
-          <button onClick={() => deleteQuestion(data.id)}><i className="fa fa-trash" /></button>
-          <button><Link to={`/editQuestion/${data.id}`}><i className="fa fa-edit" /></Link></button>
+          <button onClick={() => deleteAnswer(data.id)}><i className="fa fa-trash" /></button>
+          <button><Link to={`/editAnswer/${data.id}`}><i className="fa fa-edit" /></Link></button>
         </div>  
         </>
       }
       </div>
       <br/>
-      <div className="QuestionCardDataInfo">
+      <div className="AnswerCardDataInfo">
         <>
-        <div><p>{QuestionVote} vote</p></div>
+        <div><p>{AnswerVote} vote</p></div>
       <div>
-        <Link to={`/question/${data.id}`}>
-      <h2>{data.title}</h2>
-      </Link>
       {data.isEdited && <p>Edited</p>}
       <p>{data.timestamp}</p>
       <p>{data.description}</p>
@@ -74,4 +71,4 @@ const Question = ({ data }) => {
 
 }
  
-export default Question;
+export default Answer;
