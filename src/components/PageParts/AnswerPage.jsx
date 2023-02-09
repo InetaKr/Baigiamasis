@@ -4,13 +4,13 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import Answers from "../Answers/Answers";
 import AddAnswer from "../Answers/AddAnswer"
+import Questions from "../Questions/Questions"
 
 
 const AnswerPage = () => {
 
     const { id } = useParams();
-    const { questions } = useContext(QuestionsContext);
-    
+    const { questions } = useContext(QuestionsContext);    
     const { answers } = useContext(AnswersContext);
 
     const selectedQuestion = questions.find(question => question.id.toString() === id);
@@ -19,8 +19,7 @@ const AnswerPage = () => {
 
     return (
       <>
-      <h2>{selectedQuestion.title}</h2>
-      <p>{selectedQuestion.description}</p>
+      <Questions questions={selectedQuestion}/>
       <Answers answers={selectedQuestionAnswers} />
       <AddAnswer />
       
