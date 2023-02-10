@@ -1,10 +1,11 @@
-import Questions from "../Questions/Questions";
+import FilterQuestion from "../Questions/FilterQuestion";
+
 
 
 const Forum = () => {
     return (
       <>
-       <Questions/>
+      <FilterQuestion />
       </>
     );
   }

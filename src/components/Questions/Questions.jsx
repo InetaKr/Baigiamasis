@@ -2,7 +2,7 @@ import QuestionsContext from "../../context/QuestionsContext";
 import { useContext } from "react";
 import Question from "./Question";
 
-const Questions = () => {
+const Questions = ({ questionsToShow }) => {
 
   const { questions } = useContext(QuestionsContext);
  
@@ -11,8 +11,8 @@ const Questions = () => {
     <>
     
     <div className="QuestionCardsWrapper">
-        {questions ?
-          questions.map((question, index) => 
+        {questionsToShow ?
+          questionsToShow.map((question, index) => 
             <Question 
               key={question.id || index}
               data={question}
