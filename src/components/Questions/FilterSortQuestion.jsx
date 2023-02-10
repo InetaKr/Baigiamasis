@@ -5,6 +5,7 @@ import Questions from './Questions';
 
 const FilterSortQuestion = () => {
   const [questionsToShow, setQuestionsToShow] = useState([]);
+  const [isOptionsVisible, setIsOptionsVisible] = useState(false);
   const { questions } = useContext(QuestionsContext);    
   const { answers } = useContext(AnswersContext);
 
@@ -71,13 +72,24 @@ const FilterSortQuestion = () => {
 
   return (
     <>
-    <button onClick={showAllQuestions}>All Questions</button>
-      <button onClick={answeredQuestions}>Answered</button>
-      <button onClick={unansweredQuestions}>Unanswered</button>
-      <button onClick={sortNewestToOldest}>Sort Newest to Oldest</button>
-    <button onClick={sortOldestToNewest}>Sort Oldest to Newest</button>
-    <button onClick={sortAscending}>Sort by Answer Count (Ascending)</button>
-    <button onClick={sortDescending}>Sort by Answer Count (Descending)</button>
+      <button onClick={() => setIsOptionsVisible(!isOptionsVisible)}>Filter and Sort</button>
+      {isOptionsVisible && (
+        <>
+        <div >
+          <p>Filter by :</p>
+          <button onClick={showAllQuestions}>Show All</button>
+          <button onClick={answeredQuestions}>Answered</button>
+          <button onClick={unansweredQuestions}>No Answer</button>
+        </div>
+        <div>
+          <p>Sort By</p>
+          <button onClick={sortNewestToOldest}>Newest</button>
+          <button onClick={sortOldestToNewest}>Oldest</button>
+          <button onClick={sortAscending}>Lowest Answer Count</button>
+          <button onClick={sortDescending}>Highest Answer Count</button>
+        </div> 
+        </>
+      )}
       <Questions questionsToShow={questionsToShow} />
     </>
   );
