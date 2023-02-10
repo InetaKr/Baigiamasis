@@ -3,8 +3,6 @@ import { useContext } from "react";
 import Question from "./Question";
 
 const Questions = ({ questionsToShow }) => {
-
-  const { questions } = useContext(QuestionsContext);
  
 
   return (
