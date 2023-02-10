@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import Answers from "../Answers/Answers";
 import AddAnswer from "../Answers/AddAnswer"
-import Questions from "../Questions/Questions"
+import Question from "../Questions/Question";
 
 
 const AnswerPage = () => {
@@ -19,7 +19,7 @@ const AnswerPage = () => {
 
     return (
       <>
-      <Questions questions={selectedQuestion}/>
+      <Question data={selectedQuestion}/>
       <Answers answers={selectedQuestionAnswers} />
       <AddAnswer />
       
