@@ -21,34 +21,35 @@ const AnswerPage = () => {
 
     return (
       <>
-      <Question data={selectedQuestion}/>
-      <div>
-            {
-                selectedQuestionAnswers.map((answer, index) =>
-                <Answer
-                   key={answer.id || index}
-                   data={answer}
-                   />
-                )
-            }
-        </div>
-        {loggedInUser ? (
-        <AddAnswer />
-      ) : (
-        <>
-        <h1>Please sign in to add an answer.</h1>
-        <p>You need to be signed in to ask a question. Please sign in or sign up if you don't have an account yet.</p>
-        <Link to="/signIn">
-        <button>Sign In</button>
-        </Link>
-        <Link to="/signUp">
-        <button>Sign Up</button>
-        </Link>
-        </>
-
-      )}
-    </>
-    );
+          <Question data={selectedQuestion} />
+          <div className="AnswersCardsWrapper">
+              {selectedQuestionAnswers.length === 0 ? (
+                  <p>No answers found.</p>
+              ) : (
+                  selectedQuestionAnswers.map((answer, index) =>
+                      <Answer
+                          key={answer.id || index}
+                          data={answer}
+                      />
+                  )
+              )}
+          </div>
+          {loggedInUser ? (
+              <AddAnswer />
+          ) : (
+              <>
+                  <h1>Please sign in to add an answer.</h1>
+                  <p>You need to be signed in to ask a question. Please sign in or sign up if you don't have an account yet.</p>
+                  <Link to="/signIn">
+                      <button>Sign In</button>
+                  </Link>
+                  <Link to="/signUp">
+                      <button>Sign Up</button>
+                  </Link>
+              </>
+          )}
+      </>
+  );
   }
    
   export default AnswerPage;

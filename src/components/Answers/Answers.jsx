@@ -19,7 +19,7 @@ const Answers = () => {
             />  
           )
           :
-          <p>Loading...</p>
+          <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading"/>
         }
       </div>
     </>
