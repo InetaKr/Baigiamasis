@@ -1,34 +1,34 @@
-import './App.css';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import Header from './components/PageParts/Header';
-import Home from './components/PageParts/Home';
-import SignIn from './components/User/SignIn';
-import SignUp from './components/User/SignUp';
-import Forum from './components/PageParts/Forum';
-import AddQuestion from './components/Questions/AddQuestion';
-import EditQuestion from './components/Questions/EditQuestion';
-import AnswerPage from './components/PageParts/AnswerPage';
-import Footer from './components/PageParts/Footer';
-import Hero from './components/PageParts/Hero'
+import "./App.css";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Header from "./components/PageParts/Header";
+import Home from "./components/PageParts/Home";
+import SignIn from "./components/User/SignIn";
+import SignUp from "./components/User/SignUp";
+import Forum from "./components/PageParts/Forum";
+import AddQuestion from "./components/Questions/AddQuestion";
+import EditQuestion from "./components/Questions/EditQuestion";
+import AnswerPage from "./components/PageParts/AnswerPage";
+import Footer from "./components/PageParts/Footer";
+import Hero from "./components/PageParts/Hero";
 
 const App = () => {
   const location = useLocation();
   return (
     <>
-    <Header />
-    {location.pathname === '/' ? <Hero /> : null}
-     <Routes>
-        <Route path='/' element={<Home />}  />
-        <Route path='/signIn' element={<SignIn/>} />
-        <Route path='/signUp' element={<SignUp/>} />
-        <Route path='/forum' element={<Forum/>} />
-        <Route path='/add' element={<AddQuestion />}/>
+      <Header />
+      {location.pathname === "/" ? <Hero /> : null}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signIn" element={<SignIn />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/forum" element={<Forum />} />
+        <Route path="/add" element={<AddQuestion />} />
         <Route path="/editQuestion/:id" element={<EditQuestion />} />
-        <Route path="/question/:id" element={<AnswerPage/>} />    
+        <Route path="/question/:id" element={<AnswerPage />} />
       </Routes>
-    <Footer/>
+      <Footer />
     </>
   );
-}
+};
 
 export default App;

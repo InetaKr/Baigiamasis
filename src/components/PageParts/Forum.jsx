@@ -1,13 +1,11 @@
 import FilterSortQuestion from "../Questions/FilterSortQuestion";
 
-
-
 const Forum = () => {
-    return (
-      <>
+  return (
+    <>
       <FilterSortQuestion />
-      </>
-    );
-  }
-   
-  export default Forum;
+    </>
+  );
+};
+
+export default Forum;
