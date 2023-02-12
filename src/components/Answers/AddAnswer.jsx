@@ -17,10 +17,15 @@ const AddAnswer = ( ) => {
     const { addNewAnswers } = useContext(AnswersContext);
     const { loggedInUser } = useContext(UserContext);
     const navigation = useNavigate()
-   
+    const [errorMessage, setErrorMessage] = useState("");
+
 
     const handleSubmit = e => {
         e.preventDefault();
+        if (!formInputs.answer) {
+          setErrorMessage("Answer cannot be empty!");
+          return;
+       }
         const newAnswers ={
             answer: formInputs.answer,
             id: Date.now(),
@@ -37,6 +42,7 @@ const AddAnswer = ( ) => {
         navigation()
     }
     return(
+      <>
         <form onSubmit={handleSubmit} className="AddAnswer-form">
         <label>
           Answer:
@@ -47,6 +53,9 @@ const AddAnswer = ( ) => {
         </label>
         <input type="submit" value="Send" />
         </form>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+        </>
+
     )
 }
 

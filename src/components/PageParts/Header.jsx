@@ -28,10 +28,18 @@ const Header = () => {
           ) : (
             
             <div className="loginRegister">
+              <Link to="/">HOME </Link>
+              <br />
               <Link to="/signIn">Sign In</Link>
               <br />
              
               <Link to="/signUp">Sign Up</Link>
+
+              <br />
+              <Link to="/forum">Forum</Link>
+
+              <br />
+              <Link to="/add">Ask Question</Link>
             
             </div>
             
