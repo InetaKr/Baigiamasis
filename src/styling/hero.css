@@ -1,0 +1,52 @@
+.hero-section {
+    height: 100vh;
+    background-image:url('http://cms-lc.bestfriendspetcare.com/wp-content/uploads/2020/05/adopt-pet-dog-cat-blog-14.jpg');
+    background-size: cover ;
+    display: flex;
+    flex-direction: column; 
+    align-items: end;  
+    padding-top: 90px; 
+  }
+
+  .hero-section h1{
+    text-align: right;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    padding-top: 180px; 
+    padding-right: 50px;
+  }
+
+  .hero-section p{
+    text-align: right;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 3px;
+      padding-right:50px ;
+      opacity: 0.7;       
+  }
+  
+  .hero-section span{
+    color: rgb(142,60,8);
+    font-size: 3rem;
+  }
+  
+  .hero-section button{
+    text-align: center;
+    margin-right: 50px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: 150px;
+    height: 50px;
+    color: rgb(235,181,47);
+    background-color:rgb(142,60,8);
+    border: none;
+    border-radius: 5px;    
+  }
+  
+  .hero-section button:hover{
+    cursor: pointer;
+    color: white;
+    scale: 1.2;
+  }
