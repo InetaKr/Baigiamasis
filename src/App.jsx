@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styling/App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/PageParts/Header";
 import Home from "./components/PageParts/Home";
