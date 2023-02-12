@@ -129,6 +129,10 @@
     font-size: 16px;
     color: rgb(235,181,47);
     }
+
+    input::placeholder{
+        color:rgb(235,181,47);
+    }
     
     .subscribe-form button {
     padding: 10px 20px;

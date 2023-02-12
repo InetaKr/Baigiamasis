@@ -23,8 +23,8 @@ const AnswerPage = () => {
 
   return (
     <>
-      <Question data={selectedQuestion} />
-      <div className="AnswersCardsWrapper">
+    <div className="answerPageWrapper">
+      <Question data={selectedQuestion} /> 
         {selectedQuestionAnswers.length === 0 ? (
           <p>No answers found.</p>
         ) : (
@@ -32,7 +32,6 @@ const AnswerPage = () => {
             <Answer key={answer.id || index} data={answer} />
           ))
         )}
-      </div>
       {loggedInUser ? (
         <AddAnswer />
       ) : (
@@ -50,6 +49,7 @@ const AnswerPage = () => {
           </Link>
         </>
       )}
+      </div>
     </>
   );
 };

@@ -78,24 +78,36 @@ const FilterSortQuestion = () => {
 
   return (
     <>
+    
       <button onClick={() => setIsOptionsVisible(!isOptionsVisible)}>
         Filter and Sort
       </button>
       {isOptionsVisible && (
         <>
-          <div>
+        <div className="filterSortOption-wrapper">
+          <div className="filterSortOption">
             <p>Filter by :</p>
+            <div className="filterSortOptionButtons">
             <button onClick={showAllQuestions}>Show All</button>
             <button onClick={answeredQuestions}>Answered</button>
             <button onClick={unansweredQuestions}>No Answer</button>
+            </div>
           </div>
-          <div>
-            <p>Sort By</p>
+          <div className="filterSortOption">
+            <p>Sort By:</p>
+            <div className="filterSortOptionButtons">
+            <div>  
             <button onClick={sortNewestToOldest}>Newest</button>
             <button onClick={sortOldestToNewest}>Oldest</button>
-            <button onClick={sortAscending}>Lowest Answer Count</button>
-            <button onClick={sortDescending}>Highest Answer Count</button>
+            </div>
+            <div>
+            <button onClick={sortAscending}>Lowest Count</button>
+            <button onClick={sortDescending}>Highest Count</button>
+            </div>
+            </div>
           </div>
+          </div>
+
         </>
       )}
       <Questions questionsToShow={questionsToShow} />

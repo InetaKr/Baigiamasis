@@ -57,7 +57,7 @@ const SignIn = () => {
               />
             </label>
           </div>
-          <button type="submit"> Log In </button>
+          <input type="submit" value="Log In"></input>
           {errorMessage && <p>{errorMessage}</p>}
         </form>
       </div>
