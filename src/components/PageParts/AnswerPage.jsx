@@ -2,9 +2,9 @@ import QuestionsContext from "../../context/QuestionsContext";
 import AnswersContext from "../../context/AnswersContext";
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
-import Answers from "../Answers/Answers";
+import Answer from "../Answers/Answer";
 import AddAnswer from "../Answers/AddAnswer"
-import Questions from "../Questions/Questions"
+import Question from "../Questions/Question";
 
 
 const AnswerPage = () => {
@@ -15,12 +15,22 @@ const AnswerPage = () => {
 
     const selectedQuestion = questions.find(question => question.id.toString() === id);
     
-    const selectedQuestionAnswers = answers.filter(answer => answer.questionId === id);
+    const selectedQuestionAnswers = answers.filter(answer => answer.questionId.toString() === id);
 
     return (
       <>
-      <Questions questions={selectedQuestion}/>
-      <Answers answers={selectedQuestionAnswers} />
+      <Question data={selectedQuestion}/>
+      <div>
+            {
+                selectedQuestionAnswers.map((answer, index) =>
+                <Answer
+                   key={answer.id || index}
+                   data={answer}
+                   />
+                )
+            }
+        </div>
+     
       <AddAnswer />
       
       </>

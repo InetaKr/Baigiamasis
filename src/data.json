@@ -27,36 +27,26 @@
         1675844563440
       ],
       "disLikedBy": []
+    },
+    {
+      "title": "ASKING 1",
+      "description": "askaing something i do not know what?",
+      "timestamp": "2/9/2023, 10:30:39 PM",
+      "id": 1675974639940,
+      "userId": 1675844400794,
+      "isEdited": false,
+      "likedBy": [],
+      "disLikedBy": []
     }
   ],
   "answers": [
     {
-      "answer": "paeditinau darkarta bandau ",
-      "id": 234,
+      "answer": "answesmth",
+      "id": 1676015059092,
       "userId": 1675844400794,
       "questionId": 1675867023071,
-      "timestamp": "2/9/2023, 2:23:22 PM",
-      "isEdited": true,
-      "likedBy": [],
-      "disLikedBy": []
-    },
-    {
-      "answer": "hiefjefjwolfkgerherwpfkwp;d",
-      "id": 2224,
-      "userId": 1675844400794,
-      "questionId": 1675867023071,
-      "timestamp": "2/8/2023, 4:43:19 PM",
+      "timestamp": "2/10/2023, 9:44:19 AM",
       "isEdited": false,
-      "likedBy": [],
-      "disLikedBy": []
-    },
-    {
-      "answer": "KAZkas gal gausis",
-      "id": 1675939764694,
-      "userId": 1675844563440,
-      "questionId": 1675867023071,
-      "timestamp": "2/9/2023, 2:20:42 PM",
-      "isEdited": true,
       "likedBy": [],
       "disLikedBy": []
     }

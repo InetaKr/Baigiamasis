@@ -11,6 +11,7 @@ const Answer = ({ data }) => {
   const { deleteAnswer, handleLike, handleDisLike,updateAnswer } = useContext(AnswersContext);
 
   const AnswerOwner = users.find(user => user.id === data.userId);
+  
   const AnswerVote = data.likedBy.length - data.disLikedBy.length;
 
   const toggleEdit = () => {
