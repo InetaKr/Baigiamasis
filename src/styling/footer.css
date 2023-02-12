@@ -1,0 +1,155 @@
+
+.footer-wrapper {
+    margin-top: 250px;
+    padding-bottom: 30px;
+    background: rgb(235,181,47);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 50px
+}
+
+.footer-first-section{
+    width: 33%;
+    margin-left: 30px;
+}
+
+
+.footer-text p {
+    margin-bottom: 14px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.footer-social-icon span {
+    color: rgb(142,60,8);
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.footer-social-icon a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.footer-social-icon i {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+}
+
+.facebook-bg{
+    background: #3B5998;
+}
+
+.twitter-bg{
+    background: #55ACEE;
+}
+
+.google-bg{
+    background: #DD4B39;
+}
+
+.footer-second-section{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+
+.company-info i {
+    color: rgb(142,60,8);
+    font-size: 50px;
+    float: left;
+    margin-top: 10px;
+}
+
+.company-info-text {
+    padding-left: 15px;
+    display: inline-block;
+}
+
+.company-info-text h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.company-info-text span {
+    color: rgb(142,60,8);
+    font-size: 15px;
+}
+
+.footer-third-section{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+
+.footer-heading h3 {
+    color: rgb(142,60,8);
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.footer-heading h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    width: 70px;
+    background: rgb(142,60,8);
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width:60%;
+    }
+    
+    .subscribe-form input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    margin-right: 0;
+    border: 1px solid rgb(108,100,100);
+    background-color: rgb(108,100,100);
+    border-radius: 5px 0px 0px 5px;
+    font-size: 16px;
+    color: rgb(235,181,47);
+    }
+    
+    .subscribe-form button {
+    padding: 10px 20px;
+    background-color: rgb(142, 60, 8);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: rgb(235,181,47);
+    font-size: 16px;
+    cursor: pointer;
+    }
+  
+
+.copyright-text{
+    background: rgb(235,181,47);
+    padding: 25px 0;
+}
+
+.copyright-text p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center; 
+}
+
+  
