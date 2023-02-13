@@ -34,33 +34,33 @@ const EditQuestion = () => {
 
   return (
     <>
-    <div className="form-wrapper">
-      <form onSubmit={handleSubmit} className="form">
-        <h2>Edit Question</h2>
-        <label>
-          Title:
-          <input
-            type="text"
-            name="title"
-            value={formInputs.title}
-            onChange={(e) =>
-              setFormInputs({ ...formInputs, title: e.target.value })
-            }
-          />
-        </label>
-        <label>
-          Description:
-          <textarea
-            type="text"
-            name="description"
-            value={formInputs.description}
-            onChange={(e) =>
-              setFormInputs({ ...formInputs, description: e.target.value })
-            }
-          />
-        </label>
-        <input type="submit" value="Edit" />
-      </form>
+      <div className="form-wrapper">
+        <form onSubmit={handleSubmit} className="form">
+          <h2>Edit Question</h2>
+          <label>
+            Title:
+            <input
+              type="text"
+              name="title"
+              value={formInputs.title}
+              onChange={(e) =>
+                setFormInputs({ ...formInputs, title: e.target.value })
+              }
+            />
+          </label>
+          <label>
+            Description:
+            <textarea
+              type="text"
+              name="description"
+              value={formInputs.description}
+              onChange={(e) =>
+                setFormInputs({ ...formInputs, description: e.target.value })
+              }
+            />
+          </label>
+          <input type="submit" value="Edit" />
+        </form>
       </div>
     </>
   );

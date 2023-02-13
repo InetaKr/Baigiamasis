@@ -1,82 +1,80 @@
-
 .header-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    width: 100%;
-    position:fixed;
-    z-index: 1;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    overflow-x: hidden;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-  
-  .logo img {
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  .header-nav-wrapper {
-    margin-left: 80px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .header-nav-left {
-    display: flex;
-  }
-  
-  .header-nav-right {
-    display: flex;
-    margin-right: 50px;
-  }
-  
-  .header-nav-link {
-    display: inline-block;
-    margin-right: 20px;
-    text-decoration: none;
-    color: rgb(142,60,8);
-    font-size: 20px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  overflow-x: hidden;
+}
 
-  .header-nav-link:hover{
-    cursor: pointer;
-    color: rgb(235,181,47);
-  }
-  
-  .userInfo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .userInfo img {
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    margin-right: 10px;
-  }
-  
-  .userInfo span {
-    font-size: 20px;
-    font-weight: 700;
-    color: rgb(142,60,8);
-    margin-right: 20px;
-    letter-spacing: 3px;
-  }
-  
-  .userInfo button {
-    padding: 8px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header-nav-wrapper {
+  margin-left: 80px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-nav-left {
+  display: flex;
+}
+
+.header-nav-right {
+  display: flex;
+  margin-right: 50px;
+}
+
+.header-nav-link {
+  display: inline-block;
+  margin-right: 20px;
+  text-decoration: none;
+  color: rgb(142, 60, 8);
+  font-size: 20px;
+}
+
+.header-nav-link:hover {
+  cursor: pointer;
+  color: rgb(235, 181, 47);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.userInfo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.userInfo span {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(142, 60, 8);
+  margin-right: 20px;
+  letter-spacing: 3px;
+}
+
+.userInfo button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}

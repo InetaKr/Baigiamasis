@@ -1,34 +1,33 @@
 .not-login-message {
-    top: 200px; 
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
+  top: 200px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.not-login-message-text h2{
-    font-size: 3rem;
-    text-align: center;
-    text-transform: uppercase;
-    color:rgb(142,60,8) ;
-
+.not-login-message-text h2 {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(142, 60, 8);
 }
 
-.not-login-message-text p{
-    font-size: 1.5rem;
-    margin: 50px;
+.not-login-message-text p {
+  font-size: 1.5rem;
+  margin: 50px;
 }
 
-.not-login-message-buttons{
-    display: flex;
-    gap: 50px;
-    justify-content: center;
-    margin: 50px;
+.not-login-message-buttons {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin: 50px;
 }
 
-.not-login-message-buttons button{
-    width: 200px;
-    height: 60px;
+.not-login-message-buttons button {
+  width: 200px;
+  height: 60px;
 }

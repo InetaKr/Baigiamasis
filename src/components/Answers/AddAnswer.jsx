@@ -38,22 +38,22 @@ const AddAnswer = () => {
   };
   return (
     <>
-    <div className="form-wrapper">
-      <form onSubmit={handleSubmit} className="form">
-        <label>
-          Answer:
-          <textarea
-            type="text"
-            name="answer"
-            value={formInputs.answer}
-            onChange={(e) =>
-              setFormInputs({ ...formInputs, answer: e.target.value })
-            }
-          />
-        </label>
-        <input type="submit" value="Send" />
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-      </form>
+      <div className="form-wrapper">
+        <form onSubmit={handleSubmit} className="form">
+          <label>
+            Answer:
+            <textarea
+              type="text"
+              name="answer"
+              value={formInputs.answer}
+              onChange={(e) =>
+                setFormInputs({ ...formInputs, answer: e.target.value })
+              }
+            />
+          </label>
+          <input type="submit" value="Send" />
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
+        </form>
       </div>
     </>
   );

@@ -29,79 +29,86 @@ const Answer = ({ data }) => {
 
   return (
     <>
-    <div className="AnswerCards">
-      <div className="ownerInfo">
-        {AnswerOwner && (
-          <>
-            <div className="answer-info">
-              <img src={AnswerOwner.avatar} alt="user avatar" />
-              <span>{AnswerOwner.userName}</span>
-            </div>
-          </>
-        )}
+      <div className="AnswerCards">
+        <div className="ownerInfo">
+          {AnswerOwner && (
+            <>
+              <div className="answer-info">
+                <img src={AnswerOwner.avatar} alt="user avatar" />
+                <span>{AnswerOwner.userName}</span>
+              </div>
+            </>
+          )}
 
-        {loggedInUser && loggedInUser.id === AnswerOwner.id && (
-          <>
-            <div className="ownerButtons">
-              <button onClick={() => deleteAnswer(data.id)}>
-                <i className="fa fa-trash" />
+          {loggedInUser && loggedInUser.id === AnswerOwner.id && (
+            <>
+              <div className="ownerButtons">
+                <button onClick={() => deleteAnswer(data.id)}>
+                  <i className="fa fa-trash" />
+                </button>
+                <button onClick={toggleEdit}>
+                  <i className="fa fa-edit" />
+                </button>
+              </div>
+            </>
+          )}
+        </div>
+        <br />
+
+        <div className="AnswerCardDataInfo">
+          {isEditing ? (
+            <EditAnswer
+              data={data}
+              setIsEditing={setIsEditing}
+              onUpdate={onUpdate}
+            />
+          ) : (
+            <>
+              <div>
+                <p>{AnswerVote} vote</p>
+              </div>
+              <div className="timestamp">
+                {data.isEdited && (
+                  <p>
+                    <span>Edited</span>
+                  </p>
+                )}
+                <p>{data.timestamp}</p>
+              </div>
+              <div className="card-p">
+                <p>{data.answer}</p>
+              </div>
+            </>
+          )}
+        </div>
+
+        <div className="likeDislikeWrapper">
+          {loggedInUser && (
+            <>
+              <button
+                onClick={() => handleLike(data.id)}
+                className="likeButton"
+              >
+                {data.likedBy.includes(loggedInUser.id) ? (
+                  <i className="fa fa-thumbs-up"></i>
+                ) : (
+                  <i className="fa fa-thumbs-o-up"></i>
+                )}
               </button>
-              <button onClick={toggleEdit}>
-                <i className="fa fa-edit" />
+              <button
+                onClick={() => handleDisLike(data.id)}
+                className="DisLikeButton"
+              >
+                {data.disLikedBy.includes(loggedInUser.id) ? (
+                  <i className="fa fa-thumbs-down"></i>
+                ) : (
+                  <i className="fa fa-thumbs-o-down"></i>
+                )}
               </button>
-            </div>
-          </>
-        )}
+            </>
+          )}
+        </div>
       </div>
-      <br />
-
-      <div className="AnswerCardDataInfo">
-        {isEditing ? (
-          <EditAnswer
-            data={data}
-            setIsEditing={setIsEditing}
-            onUpdate={onUpdate}
-          />
-        ) : (
-          <>
-            <div>
-              <p>{AnswerVote} vote</p>
-            </div>
-            <div className="timestamp">
-              {data.isEdited && <p><span>Edited</span></p>}
-              <p>{data.timestamp}</p>
-             </div> 
-             <div className="card-p">
-              <p>{data.answer}</p>
-            </div>
-          </>
-        )}
-      </div>
-
-      <div className="likeDislikeWrapper">
-        {loggedInUser && (
-          <>
-            <button onClick={() => handleLike(data.id)} className="likeButton">
-              {data.likedBy.includes(loggedInUser.id) ? (
-                <i className="fa fa-thumbs-up"></i>
-              ) : (
-                <i className="fa fa-thumbs-o-up"></i>
-              )}
-            </button>
-            <button
-              onClick={() => handleDisLike(data.id)}
-              className="DisLikeButton"
-            >
-              {data.disLikedBy.includes(loggedInUser.id) ? (
-                <i className="fa fa-thumbs-down"></i>
-              ) : (
-                <i className="fa fa-thumbs-o-down"></i>
-              )}
-            </button>
-          </>
-        )}
-      </div>
-    </div>
     </>
   );
 };
