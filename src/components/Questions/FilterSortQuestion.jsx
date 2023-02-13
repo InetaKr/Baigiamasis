@@ -4,13 +4,13 @@ import AnswersContext from "../../context/AnswersContext";
 import Questions from "./Questions";
 
 const FilterSortQuestion = () => {
-  const [questionsToShow, setQuestionsToShow] = useState([]);
+  const [filteredQuestions, setFilteredQuestions] = useState([]);
   const [isOptionsVisible, setIsOptionsVisible] = useState(false);
   const { questions } = useContext(QuestionsContext);
   const { answers } = useContext(AnswersContext);
 
   useEffect(() => {
-    setQuestionsToShow(questions);
+    setFilteredQuestions(questions);
   }, [questions, answers]);
 
   const answeredQuestions = () => {
@@ -18,7 +18,7 @@ const FilterSortQuestion = () => {
       return answers.some((answer) => answer.questionId === question.id);
     });
 
-    setQuestionsToShow(answered);
+    setFilteredQuestions(answered);
   };
 
   const unansweredQuestions = () => {
@@ -26,33 +26,33 @@ const FilterSortQuestion = () => {
       return !answers.some((answer) => answer.questionId === question.id);
     });
 
-    setQuestionsToShow(unanswered);
+    setFilteredQuestions(unanswered);
   };
 
   const showAllQuestions = () => {
-    setQuestionsToShow(questions);
+    setFilteredQuestions(questions);
   };
 
   const sortNewestToOldest = () => {
-    const sortedQuestions = [...questionsToShow].sort((a, b) => {
+    const sortedQuestions = [...filteredQuestions].sort((a, b) => {
       const dateA = new Date(a.timestamp);
       const dateB = new Date(b.timestamp);
       return dateB - dateA;
     });
-    setQuestionsToShow(sortedQuestions);
+    setFilteredQuestions(sortedQuestions);
   };
 
   const sortOldestToNewest = () => {
-    const sortedQuestions = [...questionsToShow].sort((a, b) => {
+    const sortedQuestions = [...filteredQuestions].sort((a, b) => {
       const dateA = new Date(a.timestamp);
       const dateB = new Date(b.timestamp);
       return dateA - dateB;
     });
-    setQuestionsToShow(sortedQuestions);
+    setFilteredQuestions(sortedQuestions);
   };
 
   const sortByAnswerCount = (sortAsc) => {
-    const sortedQuestions = questionsToShow.slice().sort((a, b) => {
+    const sortedQuestions = filteredQuestions.slice().sort((a, b) => {
       const answerCountA = answers.filter(
         (answer) => answer.questionId === a.id
       ).length;
@@ -65,7 +65,7 @@ const FilterSortQuestion = () => {
         : answerCountB - answerCountA;
     });
 
-    setQuestionsToShow(sortedQuestions);
+    setFilteredQuestions(sortedQuestions);
   };
 
   const sortAscending = () => {
@@ -108,7 +108,7 @@ const FilterSortQuestion = () => {
           </div>
         </>
       )}
-      <Questions questionsToShow={questionsToShow} />
+      <Questions filteredQuestions={filteredQuestions} />
     </>
   );
 };
