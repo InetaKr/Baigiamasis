@@ -25,8 +25,12 @@
 }
 
 .wrapPage .form {
-  width: 100%;
+  width: 800px;
 }
+
+.wrapPage .form textarea{
+  width: 100%;
+} 
 
 .AnswerCardsWrapper {
   margin-top: 100px;

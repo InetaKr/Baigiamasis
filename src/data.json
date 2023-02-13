@@ -132,12 +132,12 @@
       "disLikedBy": []
     },
     {
-      "answer": "I head pets can have it too. It is sad ",
+      "answer": "I heard pets can have it too. It is sad ",
       "id": 1676254451344,
       "userId": 1675844563440,
       "questionId": 1676253840501,
-      "timestamp": "2/13/2023, 4:14:11 AM",
-      "isEdited": false,
+      "timestamp": "2/13/2023, 4:47:51 AM",
+      "isEdited": true,
       "likedBy": [
         1676253481417
       ],
