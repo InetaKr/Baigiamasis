@@ -23,7 +23,7 @@ const UserProvider = ({ children }) => {
       body: JSON.stringify(newUser),
     })
       .then((res) => res.json())
-      .then((usersData) => {
+      .then(() => {
         setUsers([...users, newUser]);
       });
   };

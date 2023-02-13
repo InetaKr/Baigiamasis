@@ -58,7 +58,7 @@ const SignIn = () => {
             </label>
           </div>
           <input type="submit" value="Log In"></input>
-          {errorMessage && <p>{errorMessage}</p>}
+          {errorMessage && <div className="error-message">{errorMessage}</div>}
         </form>
       </div>
     </>

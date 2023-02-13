@@ -90,9 +90,9 @@ const SignUp = () => {
                     setValues({ ...values, userName: e.target.value })
                   }
                 />
-                {invalidUsername && <span>Username already taken</span>}
+                {invalidUsername && <div className="error-message">Username already taken</div>}
                 {errors.userName && touched.userName ? (
-                  <span>{errors.userName}</span>
+                  <div className="error-message">{errors.userName}</div>
                 ) : null}
               </label>
               <label>
