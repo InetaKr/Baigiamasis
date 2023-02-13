@@ -42,9 +42,9 @@ const AnswerPage = () => {
           <>
             <div className="not-login-message">
               <div className="not-login-message-text">
-                <h2>Please sign in to ask a question</h2>
+                <h2>Please sign in to give an answer</h2>
                 <p>
-                  You need to be signed in to ask a question. Please sign in or
+                  You need to be signed in to write an answer. Please sign in or
                   sign up if you don't have an account yet.
                 </p>
               </div>
