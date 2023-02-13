@@ -6,9 +6,9 @@ const Footer = () => {
           <div className="footer-first-section">
             <div className="footer-text">
               <p>
-                You Love Cats...WE Love Cats..Everyone here Loves Cats. <br />{" "}
-                If you Love Dogs you do not belong here. <br />
-                Let's share our Love for Cats Together !
+                You Love Animals...WE Love Animals..Everyone here Loves Animals. <br />{" "}
+                If you Love your Pets you came to the right place. <br />
+                Let's share our Love for Pets Together !
               </p>
             </div>
             <div className="footer-social-icon">
@@ -43,7 +43,7 @@ const Footer = () => {
               <i className="fa fa-envelope-open company-info-icon"></i>
               <div className="company-info-text">
                 <h4>Mail Us</h4>
-                <span>CatLovers@info.com</span>
+                <span>Pawzly@info.com</span>
               </div>
             </div>
           </div>
