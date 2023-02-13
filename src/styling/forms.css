@@ -102,3 +102,19 @@
 	font-size: 20px;
     overflow:auto;    
 }
+
+.edit-form{
+    display: flex;
+    gap:20px
+}
+
+.edit-form textarea{
+    border: none;
+    border-bottom: 2px solid rgb(142,60,8) ;
+	background: transparent;
+	outline: none;
+	height: 30px;
+    width: 60%;
+	font-size: 20px;
+    overflow:auto;   
+}

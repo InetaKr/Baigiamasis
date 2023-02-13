@@ -38,7 +38,8 @@ const AddAnswer = () => {
   };
   return (
     <>
-      <form onSubmit={handleSubmit} className="AddAnswer-form">
+    <div className="form-wrapper">
+      <form onSubmit={handleSubmit} className="form">
         <label>
           Answer:
           <textarea
@@ -51,8 +52,9 @@ const AddAnswer = () => {
           />
         </label>
         <input type="submit" value="Send" />
-      </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
+      </form>
+      </div>
     </>
   );
 };

@@ -11,7 +11,7 @@ const EditAnswer = ({ data, setIsEditing, onUpdate }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="edit-form">
       <textarea
         type="text"
         value={formInputs.answer}

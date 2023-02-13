@@ -28,6 +28,7 @@ const Answer = ({ data }) => {
   };
 
   return (
+    <>
     <div className="AnswerCards">
       <div className="ownerInfo">
         {AnswerOwner && (
@@ -66,9 +67,11 @@ const Answer = ({ data }) => {
             <div>
               <p>{AnswerVote} vote</p>
             </div>
-            <div>
-              {data.isEdited && <p>Edited</p>}
+            <div className="timestamp">
+              {data.isEdited && <p><span>Edited</span></p>}
               <p>{data.timestamp}</p>
+             </div> 
+             <div className="card-p">
               <p>{data.answer}</p>
             </div>
           </>
@@ -99,6 +102,7 @@ const Answer = ({ data }) => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

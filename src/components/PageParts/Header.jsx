@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <>
-    
+    <header>
       <nav className="header-nav">
       <div className="logo">
           <Link to="/">
@@ -46,6 +46,7 @@ const Header = () => {
         </div>
         <Outlet />
       </nav>
+      </header>
 
       
     </>

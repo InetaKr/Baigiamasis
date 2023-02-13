@@ -37,16 +37,5 @@
       "disLikedBy": []
     }
   ],
-  "answers": [
-    {
-      "answer": "answe1",
-      "id": 1676198497471,
-      "userId": 1675844563440,
-      "questionId": 1675974639940,
-      "timestamp": "2/12/2023, 12:41:37 PM",
-      "isEdited": false,
-      "likedBy": [],
-      "disLikedBy": []
-    }
-  ]
+  "answers": []
 }
