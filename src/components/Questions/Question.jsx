@@ -1,7 +1,7 @@
 import UserContext from "../../context/UserContext";
 import QuestionsContext from "../../context/QuestionsContext";
 import { useContext } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Question = ({ data }) => {
   const { users, loggedInUser } = useContext(UserContext);
@@ -9,9 +9,15 @@ const Question = ({ data }) => {
     useContext(QuestionsContext);
 
   const location = useLocation();
+  const navigate= useNavigate();
 
   const QuestionOwner = users.find((user) => user.id === data.userId);
   const QuestionVote = data.likedBy.length - data.disLikedBy.length;
+
+  const handleDelete = () =>{
+    deleteQuestion(data.id);
+    navigate('/forum')
+  }
 
   return (
     <div className="QuestionCards">
@@ -28,7 +34,7 @@ const Question = ({ data }) => {
         {loggedInUser && loggedInUser.id === QuestionOwner.id && (
           <>
             <div className="ownerButtons">
-              <button onClick={() => deleteQuestion(data.id)}>
+              <button onClick={handleDelete} >
                 <i className="fa fa-trash" />
               </button>
               <button>

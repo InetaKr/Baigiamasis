@@ -32,7 +32,7 @@ const SignIn = () => {
     <>
       <div className="form-wrapper">
         <form onSubmit={handleSubmit} className="form">
-          <h1>Log In</h1>
+          <h1>Sign In</h1>
           <div className="label-wrapper">
             <label>
               User Name:
