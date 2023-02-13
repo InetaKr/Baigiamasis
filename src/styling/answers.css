@@ -1,0 +1,122 @@
+.questionWrapper {
+  top: 100px;
+  position: relative;
+  width: 70%;
+}
+
+.questionWrapper .QuestionCards {
+  box-shadow: none;
+}
+
+.wrapPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapPage .QuestionCards {
+  width: 100%;
+}
+
+.wrapPage .not-login-message {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.wrapPage .form {
+  width: 800px;
+}
+
+.wrapPage .form textarea{
+  width: 100%;
+} 
+
+.AnswerCardsWrapper {
+  margin-top: 100px;
+  height: 100%;
+  width: 70%;
+  background-color: rgb(235, 181, 47, 0.6);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.AnswerCardsWrapper p {
+  padding: 20px;
+  font-size: 20px;
+  color: rgb(142, 60, 8);
+}
+
+.AnswerCards {
+  width: 70%;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(235, 181, 47, 0.6);
+  border: 2px solid rgb(142, 60, 8);
+}
+
+.ownerInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.answer-info {
+  display: flex;
+  align-items: center;
+}
+
+.answer-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.answer-info span {
+  font-size: 20px;
+  color: rgb(142, 60, 8);
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.ownerButtons {
+  display: flex;
+  align-items: center;
+}
+
+.ownerButtons button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  padding-right: 30px;
+}
+
+.likeDislikeWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.likeDislikeWrapper button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.card-p p {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: black;
+}
