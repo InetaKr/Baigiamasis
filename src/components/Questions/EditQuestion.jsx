@@ -34,7 +34,8 @@ const EditQuestion = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="Edit-form">
+    <div className="form-wrapper">
+      <form onSubmit={handleSubmit} className="form">
         <h2>Edit Question</h2>
         <label>
           Title:
@@ -60,6 +61,7 @@ const EditQuestion = () => {
         </label>
         <input type="submit" value="Edit" />
       </form>
+      </div>
     </>
   );
 };

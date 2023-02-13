@@ -13,6 +13,20 @@
       "password": "InetaKr22",
       "avatar": "https://e1.pxfuel.com/desktop-wallpaper/428/888/desktop-wallpaper-cat-icons-lockscreens-red-psd-and-aesthetic-aesthetic-cat.jpg",
       "id": 1675844563440
+    },
+    {
+      "userName": "Ugne-StanUp",
+      "email": "Ugne-StanUp@email.com",
+      "password": "Ugne22",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/016/123/765/small/microphone-icon-vintage-device-with-a-wire-hand-drawn-illustration-isolated-on-white-musical-item-for-karaoke-broadcasts-stand-up-simple-doodle-outline-cartoon-clipart-for-logo-prints-vector.jpg",
+      "id": 1676253374801
+    },
+    {
+      "userName": "LigitaSmart",
+      "email": "LigitaSmartMouse@email.com",
+      "password": "Ligita22",
+      "avatar": "https://img.freepik.com/premium-vector/cute-cartoon-meisje-baby-muis-hand-tekenen-cartoon_157027-23.jpg?w=2000",
+      "id": 1676253481417
     }
   ],
   "questions": [
@@ -24,30 +38,121 @@
       "userId": 1675844563440,
       "isEdited": true,
       "likedBy": [
+        1676253374801,
+        1675844400794
+      ],
+      "disLikedBy": []
+    },
+    {
+      "title": "Dog Digging",
+      "description": "Is there a way I can stop my dog from digging holes in the yard? He digs it non-stop...My flowers are gone ",
+      "timestamp": "2/13/2023, 4:10:03 AM",
+      "id": 1675974639940,
+      "userId": 1675844400794,
+      "isEdited": true,
+      "likedBy": [
+        1676253374801,
         1675844563440
       ],
       "disLikedBy": []
     },
     {
-      "title": "ASKING 1",
-      "description": "askaing something i do not know what?",
-      "timestamp": "2/9/2023, 10:30:39 PM",
-      "id": 1675974639940,
-      "userId": 1675844400794,
+      "title": "Dog Dementia",
+      "description": "My older dog seems to have dementia…Is this possible? Do dogs have that kibda sickness",
+      "timestamp": "2/13/2023, 4:04:00 AM",
+      "id": 1676253840501,
+      "userId": 1676253481417,
       "isEdited": false,
-      "likedBy": [],
+      "likedBy": [
+        1676253374801
+      ],
+      "disLikedBy": [
+        1675844400794
+      ]
+    },
+    {
+      "title": "When give medication",
+      "description": "When should I give my pet medication for heartworm, fleas, or ticks? ",
+      "timestamp": "2/13/2023, 4:06:05 AM",
+      "id": 1676253965264,
+      "userId": 1676253374801,
+      "isEdited": false,
+      "likedBy": [
+        1675844563440,
+        1675844400794
+      ],
+      "disLikedBy": []
+    },
+    {
+      "title": "Prep for Surgery",
+      "description": "What should I do the day before a surgery for my pet? Do I need prepare smth beforhand?",
+      "timestamp": "2/13/2023, 4:07:41 AM",
+      "id": 1676254061079,
+      "userId": 1675844563440,
+      "isEdited": false,
+      "likedBy": [
+        1675844400794
+      ],
       "disLikedBy": []
     }
   ],
   "answers": [
     {
-      "answer": "answe1",
-      "id": 1676198497471,
+      "answer": "It is always best to consult with your vet regarding any specific pet medication question; that being said, there are some general guidelines you can follow regarding these three types of common treatments.\n\nHeartworm medication should be provided for pets on a consistent basis by the time they reach the age of six months. This is especially relevant for areas of the globe, like North America, where mosquitoes, the carriers of heartworm, are relatively prevalent.\nFlea medication can be applied as a preventative or on an as-needed basis, i.e., when infestation occurs! There are various types of flea medication including pills and ointment. Some work better than others, so talk to your vet!\nMuch of the time, medications on the market combat both ticks and fleas at the same time. So when should you invest in these types of pills? Some people try to be proactive in fighting off these pests since ticks especially can be very harmful for our pets if they pounce. During the months of summer and spring, the likelihood of infestation is at it’s highest, but that doesn’t mean the bugs won’t show up when the weather gets cold! A breakdown of this winter tick and flea reality can be found here in an article by PetMD. Though fleas and ticks are less prevalent at certain times to be sure; during winter, medication is still a good idea.",
+      "id": 1676254282149,
+      "userId": 1675844400794,
+      "questionId": 1676253965264,
+      "timestamp": "2/13/2023, 4:11:22 AM",
+      "isEdited": false,
+      "likedBy": [
+        1676253481417
+      ],
+      "disLikedBy": []
+    },
+    {
+      "answer": "Hole digging can pose a huge problem for pet owners! Our furball friends often love to dig up the yard at times; and to them, digging through the flower beds seems to be just as fun—if not more so—than digging through other, less glorious parts of the lawn. We want our pets to have fun, but we all know there have to be better ways!",
+      "id": 1676254371329,
+      "userId": 1675844400794,
+      "questionId": 1675974639940,
+      "timestamp": "2/13/2023, 4:12:51 AM",
+      "isEdited": false,
+      "likedBy": [
+        1675844563440
+      ],
+      "disLikedBy": []
+    },
+    {
+      "answer": "You can always go the tried-and-true route of monitoring your dog outside. With you in the yard, preventing damages becomes as simple as a “Rambo, No!” However some experts suggest providing a place for your dog to dig! Encouraging him to enjoy his possibly favorite hobby with guidelines could be the happiest solution for you both!",
+      "id": 1676254404799,
       "userId": 1675844563440,
       "questionId": 1675974639940,
-      "timestamp": "2/12/2023, 12:41:37 PM",
+      "timestamp": "2/13/2023, 4:13:24 AM",
       "isEdited": false,
       "likedBy": [],
+      "disLikedBy": []
+    },
+    {
+      "answer": "I head pets can have it too. It is sad ",
+      "id": 1676254451344,
+      "userId": 1675844563440,
+      "questionId": 1676253840501,
+      "timestamp": "2/13/2023, 4:14:11 AM",
+      "isEdited": false,
+      "likedBy": [
+        1676253481417
+      ],
+      "disLikedBy": []
+    },
+    {
+      "answer": "According to PetMd, 50% of dogs over the age of 11 shows signs of cognitive decline (which some might refer to as dementia). So the answer to your question is a yes: it is possible for an older to dog to suffer from cognitive decline/dementia.\n\nIf your dog has some of the symptoms listed in this article or any of the ones listed below, you may want to mention it to the vet during checkup, so he can test for Cognitive Dysfunction Syndrome.\n\nSeems lethargic\nNot interested in usual activities\nChange in sleeping patterns\nSeems confused",
+      "id": 1676254518992,
+      "userId": 1676253481417,
+      "questionId": 1676253840501,
+      "timestamp": "2/13/2023, 4:15:18 AM",
+      "isEdited": false,
+      "likedBy": [
+        1676253481417
+      ],
       "disLikedBy": []
     }
   ]

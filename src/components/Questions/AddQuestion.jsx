@@ -3,6 +3,7 @@ import UserContext from "../../context/UserContext";
 import { useContext, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
+
 const AddQuestion = () => {
   const [formInputs, setFormInputs] = useState({
     title: "",
@@ -41,20 +42,29 @@ const AddQuestion = () => {
     <>
       {!loggedInUser ? (
         <>
+        <div className="not-login-message">
+          <div className="not-login-message-text">
           <h2>Please sign in to ask a question</h2>
           <p>
             You need to be signed in to ask a question. Please sign in or sign
             up if you don't have an account yet.
           </p>
+          </div>
+          <div className="not-login-message-buttons">
           <Link to="/signIn">
-            <button>Sign In</button>
+          <button>Sign In</button>
           </Link>
           <Link to="/signUp">
-            <button>Sign Up</button>
+          <button>Sign Up</button>
           </Link>
+         
+          </div>
+          </div>
+        
         </>
       ) : (
-        <form onSubmit={handleSubmit} className="Add-form">
+        <div className="form-wrapper">
+        <form onSubmit={handleSubmit} className="form">
           <h2>Ask Question</h2>
           <label>
             Title:
@@ -82,6 +92,7 @@ const AddQuestion = () => {
 
           <input type="submit" value="Ask" />
         </form>
+        </div>
       )}
       {errorMessage && <p className="error-message">{errorMessage}</p>}
     </>

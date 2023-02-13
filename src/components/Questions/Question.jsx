@@ -43,9 +43,7 @@ const Question = ({ data }) => {
       <br />
       <div className="QuestionCardDataInfo">
         <>
-          <div>
-            <p>{QuestionVote} vote</p>
-          </div>
+            <p> {QuestionVote} vote</p>
           <div>
             {location.pathname === `/question/${data.id}` ? (
               <h2>{data.title}</h2>
@@ -54,8 +52,10 @@ const Question = ({ data }) => {
                 <h2>{data.title}</h2>
               </Link>
             )}
-            {data.isEdited && <p>Edited</p>}
+            <div className="timestamp">
+            {data.isEdited && <p><span>Edited</span></p>}
             <p>{data.timestamp}</p>
+            </div>
             <p>{data.description}</p>
           </div>
         </>

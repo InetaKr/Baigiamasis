@@ -148,7 +148,7 @@ const SignUp = () => {
                   }
                 />
                 {errors.avatar && touched.avatar ? (
-                  <span>{errors.avatar}</span>
+                  <div className="error-message">{errors.avatar}</div>
                 ) : null}
               </label>
             </div>

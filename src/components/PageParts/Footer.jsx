@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <footer>
+      <footer className="footer">
         <div className="footer-wrapper">
           <div className="footer-first-section">
             <div className="footer-text">
@@ -25,29 +25,29 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-second-section">
-            <div className="companyInfo">
-              <i className="fa fa-map-marker"></i>
-              <div className="companyInfo-text">
+            <div className="company-info">
+              <i className="fa fa-map-marker company-info-icon"></i>
+              <div className="company-info-text">
                 <h4>Find us</h4>
                 <span>1010 MeowAvenue, sw 12334, Pawcity</span>
               </div>
             </div>
-            <div className="companyInfo">
-              <i className="fa fa-phone"></i>
-              <div className="companyInfo-text">
+            <div className="company-info">
+              <i className="fa fa-phone company-info-icon"></i>
+              <div className="company-info-text">
                 <h4>Call us</h4>
                 <span>+37068123123</span>
               </div>
             </div>
-            <div className="companyInfo">
-              <i className="fa fa-envelope-open"></i>
-              <div className="companyInfo-text">
+            <div className="company-info">
+              <i className="fa fa-envelope-open company-info-icon"></i>
+              <div className="company-info-text">
                 <h4>Mail Us</h4>
                 <span>CatLovers@info.com</span>
               </div>
             </div>
           </div>
-          <div className="third-section">
+          <div className="footer-third-section">
             <div className="footer-heading">
               <h3>Subscribe</h3>
             </div>
